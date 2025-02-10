@@ -26,7 +26,8 @@ const myteas={
     blacktea:{
         name: 'Black Tea',
         type:"black",
-        caffien:"high"
+        caffien:"high",
+        milk:ture
     }
 }
 // copy of teas objects
