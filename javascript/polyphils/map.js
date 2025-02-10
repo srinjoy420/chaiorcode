@@ -16,5 +16,5 @@ if(!Array.prototype.mymap){
         return resukt;
     }
 }
-const doubledNumbers = numbers.mymap((number) => number * 2);
+const doubledNumbers = numbers.mymap((number) => number * number);
 console.log(doubledNumbers);
