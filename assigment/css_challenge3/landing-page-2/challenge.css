@@ -1,0 +1,154 @@
+/* Challenge CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;background-color: black;
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  /* background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("chaicohort.png"); */
+  /* background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("chaicohort.png");
+  background-size: cover; */
+  /*  */
+  color: white;
+}
+
+/* Navbar styles */
+.navbar {
+  /* Add styles for the navbar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  background-color: rgb(47, 42, 42);
+  color: white;
+}
+
+.logo {
+  /* Add styles for the logo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  /* Add styles for the logo image */
+   border-radius: 50%;
+   border: 2px solid rgb(124, 187, 30);
+}
+.logo span{
+  color: rgb(124, 187, 30);
+  font-weight: 600;
+}
+
+.menu a {
+  /* Add styles for the navigation links */
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+  will-change: transform; 
+ 
+}
+
+.menu a:hover {
+  /* Add hover styles for navigation links */
+  transform: scale(1.1) rotateX(10deg);
+  background-color: rgb(124, 187, 30);
+  transition: 0.5s ease;
+  
+}
+
+/* Hero section styles */
+.hero {
+  /* Add styles for the hero section */
+  text-align: center;
+  background-size: cover;
+  height: 120vh;
+  width: 100vw;
+  /* background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("chaicohort.png");  */
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("chaicohort.png");
+  background-size: cover;
+  
+}
+
+.hero-content {
+  /* Add styles for the hero content container */
+  position: relative;
+  top: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.hero-content h1 {
+  /* Add styles for the hero heading */
+  color:  rgb(124, 187, 30);
+}
+
+.hero-content p {
+  /* Add styles for the hero paragraph */
+}
+
+.hero-content img {
+  /* Add styles for the image in the hero section */
+  border-radius: 10px;
+  border: 2px solid rgb(124, 187, 30);
+}
+
+.enroll-button {
+  /* Add styles for the enroll button */
+  background-color: rgb(124, 187, 30);
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+}
+
+.enroll-button:hover {
+  /* Add hover styles for the enroll button */
+  background-color: white;
+  transition: 0.2s ease-in-out;
+  padding: 15px 25px;
+}
+
+/* Highlights section styles */
+.highlights {
+  /* Add styles for the highlights section */
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 70px;
+  padding: 25px 35px;
+  
+  width: 95%;
+  background-color: rgba(64, 54, 54, 0.7);
+  border-radius: 10px;
+}
+
+.highlight-card {
+  /* Add styles for each highlight card */
+  padding: 12px 12px;
+  box-shadow: rgba(176, 176, 187, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.highlight-card h3 {
+  /* Add styles for highlight card headings */
+  color: rgb(124, 187, 30);
+}
+
+.highlight-card p {
+  /* Add styles for highlight card paragraphs */
+}
