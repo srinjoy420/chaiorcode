@@ -15,6 +15,9 @@ if(!Object.myobjentries){
 
 
 
+// const obj = { a: 1, b: 2, c: 3 };
+// console.log(Object.entries(obj)); 
+// Expected output: [['a', 1], ['b', 2], ['c', 3]]
 
 
 
