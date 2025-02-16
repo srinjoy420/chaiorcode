@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="changecolor('black')" class="btn">click me</button>
+    <button onclick="changecolor('white')" class="white">click</button>
+    <button class="btn2" id="dark">hello</button>
+    <button class="btn2" id="light">theme</button>
+    <script>
+        let btn=document.querySelector(".btn");
+       
+        // function changecolor(color){
+        //     document.body.style.backgroundColor = color;
+        // }
+        // function changecolor(color){
+        //     document.body.style.backgroundColor = color;
+        // }
+        // btn2.addEventListener("click",()=>{
+        //     document.body.style.backgroundColor = "black";
+        // })
+        const darkbtn=document.getElementById("dark")
+        darkbtn.innerText="dark hu vai"
+        console.log(darkbtn);
+        darkbtn.addEventListener("click",()=>{
+            document.body.style.backgroundColor = "black";
+            console.log("dark hu vai");
+            
+        })
+        const themebtn=document.getElementById("light");
+        themebtn.addEventListener('click',()=>{
+            console.log(document.body.style.backgroundColor);
+            const currentcolor=document.body.style.backgroundColor
+            if(!currentcolor || currentcolor==="white"){
+                document.body.style.backgroundColor = "black";
+                themebtn.innerText="light theme";
+            }
+            else{
+                document.body.style.backgroundColor = "white";
+                themebtn.innerText="dark theme";
+            }
+            
+        })
+    </script>
+</body>
+</html>
