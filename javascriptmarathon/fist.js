@@ -47,7 +47,23 @@ const inventory=[
     {product:"orange",quantity:5},
     {product:"banana",quantity:15}
 ]
-// let lowstockitem= inventory.filter((item)={
-//     return item.quantity<100
-// })
+// let filtervalue=inventory.filter((item)=>(item.quantity<15))
+let filtervalue=inventory.filter((item)=>{
+    return item.quantity<15;
+})
+// console.log(filtervalue);
+
 // console.log(lowstockitem);
+let useractivity=[
+    {user:"user1",activity:45},
+    {user:"user2",activity:88},
+    {user:"user1",activity:72},
+    {user:"user3",activity:33},
+    
+ 
+];
+let mostactive=useractivity.reduce((maxuser,user)=>user.activity>maxuser.activity ? user :maxuser)
+console.log(mostactive);
+
+
+
