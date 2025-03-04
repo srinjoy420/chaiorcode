@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Kanban board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="board" id="todo">
+            <h4>Todo</h4>
+            <div class="items">
+                <p draggable="true" class="item">lern react</p>
+                <p class="item">lern js</p>
+
+            </div>
+        </div>
+        <div class="board" id="progress">
+            <h4>on progress</h4>
+        </div>
+        <div class="board" id="doen">
+            <h4>doen</h4>
+        </div>
+    </div>
+    <button class="add">Add task</button>
+    <script>
+        const addbutton = document.querySelector('.add');
+        const items = document.querySelector(".items")
+        addbutton.addEventListener("click", function () {
+            const input = prompt('what is the task');
+            if (!input) return;
+            const taskcard = document.createElement('p');
+            // create draggble
+            taskcard.setAttribute("draggable", "true");
+            // add to items
+            taskcard.classList.add('item');
+            taskcard.innerText = input;
+            items.appendChild(taskcard);
+            taskcard.addEventListener("dragstart", () => {
+                taskcard.classList.add('flying')
+            })
+            taskcard.addEventListener("dragend", () => {
+                taskcard.classList.remove('flying')
+
+            })
+
+
+        })
+
+        // board addeventlistner
+        const allboards = document.querySelectorAll(".board");
+        const allitems = document.querySelectorAll(".item");
+
+        allitems.forEach(item => {
+            item.addEventListener("dragstart", () => {
+                item.classList.add('flying')
+            })
+            item.addEventListener("dragend", () => {
+                item.classList.remove('flying')
+
+            })
+        })
+        allboards.forEach(board => {
+            board.addEventListener("dragover", () => {
+                const flyingelement = document.querySelector('.flying');
+                console.log(board, flyingelement);
+                board.appendChild(flyingelement);
+
+            })
+        })
+    </script>
+</body>
+
+</html>

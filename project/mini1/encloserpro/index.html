@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change my color</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>color button</h1>
+   <div class="wrapper">
+    <div class="colorinput">
+        <input type="text" id="color" placeholder="Enter color hexcode">
+        <button id="createbtn">create</button>
+    </div>
+    <div class="buttonsection">
+
+
+    </div>
+   </div>
+    <script>
+        const colorInput = document.getElementById('color');
+        const createBtn = document.getElementById('createbtn');
+        const buttonSection = document.querySelector('.buttonsection');
+
+        createBtn.addEventListener('click', () => {
+            const color = colorInput.value;
+            console.log(color);
+            
+            if (color) { // Check if color value is not empty
+                const btn = document.createElement('button');
+                btn.innerText = color;
+                buttonSection.appendChild(btn);
+                colorInput.value = ""; // Clear the input value
+                btn.style.backgroundColor = color;
+                // now change the body color to backcolor
+                btn.addEventListener('click', () => {
+                    document.body.style.backgroundColor = color;
+                });
+            }
+        });
+
+    </script>
+</body>
+
+</html>

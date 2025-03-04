@@ -5,12 +5,16 @@ function patanehi(fn,dilay){
     return function(...args){
         clearTimeout(myid);
         myid=setTimeout((...args) => {
-            fn.bind(this,args)
+            fn.apply(this,args)
 
             
         }, dilay);
     }
+    function greet(name){
+        console.log(`hello ${name}`);
+    }
     
 
 }
-patanehi()
+let sachme=patanehi(()=>greet('hello'),3000)
+sachme()
