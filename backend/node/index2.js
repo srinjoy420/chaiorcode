@@ -1,24 +1,42 @@
-const http=require("http");
-const express=require("express");
-
-const app=express();
-
-// const server=http.createServer(function(res,req){
-//     console.log("incoming ....");
-   
-//     console.log(req.method);
+const http = require("http");
+function handelerfunction(req,res){
+    console.log("incoming request");
     
-//     console.log(req.url);
-    
-//     res.send("ye lo")
-    
+    switch(req.method) {
+        case "GET":{
+            if(req.url==="/"){
+                res.end("homepage");
+            }
+            if(req.url==="/contact"){
+                res.end("Contact page");
+            }
+            if(req.url==="/about"){
+                res.end("About page");
+            }
 
-// });
+        }
+        break;
+        case "POST":{
 
-app.get("/", function(req, res){
-    res.send("Hello World");
-})
-app.listen(8000,function(){
-    console.log('server listening on');
+        }
+        break
+    }
+}
+
+const server = http.createServer(handelerfunction)
+  
+    // console.log(req.method);
+    // console.log(req.url);
+ 
+
+    // Set response headers
+    // res.writeHead(200, { "Content-Type": "text/plain" });
     
-})
+    // Send response
+    res.end("Ye lo ji response");
+;
+
+// Start the server
+server.listen(7000, function () {
+    console.log("Server is running on port 7000");
+});
